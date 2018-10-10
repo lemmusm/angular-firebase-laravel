@@ -1,0 +1,27 @@
+<div class="container contain">
+  <h1>Datos obtenidos desde FireAuth</h1>
+  <div class="row">
+    <div class="col-md-4 col-sm-8 text-left">
+      <mdb-card>
+        <h5 class="text-center">Display data from DB</h5>
+        <mdb-card-img src="{{modeldb.urlavatar}}" alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{modeldb.username}}</h4>
+          </mdb-card-title>
+
+          <mdb-card-text>
+            <strong>{{modeldb.email}}</strong>
+            <p>{{modeldb.dpto}} / {{modeldb.puesto}}</p>
+          </mdb-card-text>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-md-4 text-center">
+      <button mdbBtn type="button" color="warning" class="waves-light" mdbWavesEffect (click)="signOut()">
+        <mdb-icon icon="sign-out"></mdb-icon>
+        Singout
+      </button>
+    </div>
+  </div>
+</div>

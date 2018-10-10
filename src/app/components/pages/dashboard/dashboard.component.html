@@ -1,0 +1,31 @@
+<div class="container contain">
+  <div class="row">
+    <div class="col-md-4 col-sm-8 text-left">
+      <mdb-card>
+        <h5 class="text-center">Display data from Firebase</h5>
+      <mdb-card-img src="{{model.urlavatar}}" alt="Card image cap"></mdb-card-img>
+      <mdb-card-body>
+        <mdb-card-title>
+          <h4>{{model.username}}</h4>
+        </mdb-card-title>
+        
+        <mdb-card-text>
+          <strong>{{model.email}}</strong>
+          <p>{{model.uid}}</p>
+        </mdb-card-text>
+        
+        <button mdbBtn type="button" color="info" class="waves-light" mdbWavesEffect (click)="verifyRegisterincomplete()">
+          Check user
+        </button>
+        <button mdbBtn type="button" color="warning" class="waves-light" mdbWavesEffect (click)="signOut()">
+          <mdb-icon icon="sign-out"></mdb-icon>
+          Singout
+        </button>
+      </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-md-4 text-center">
+      
+    </div>
+  </div>
+</div>

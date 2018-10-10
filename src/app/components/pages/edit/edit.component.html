@@ -1,0 +1,48 @@
+<div class="container contain">
+  <div class="row">
+    <div class="col-md-6 col-sm-8 text-left">
+      <mdb-card cascade="true" wider="true">
+      
+        <div class="view view-cascade rgba-teal-light pt-3 pb-3 pr-5 pl-5">
+          <h2 class="card-header-title mb-2 text-center">Update profile</h2>
+        </div>
+        
+        <mdb-card-body cascade="true" class="text-center">
+          <mdb-card-title>
+            <h4>{{fbauth_username}}</h4>
+          </mdb-card-title>
+          
+          <!--Text-->
+          <mdb-card-text>
+            <strong>{{fbauth_email}}</strong>
+            <p>UID from Fireauth: {{fbauth_uid}}</p>
+          </mdb-card-text>
+          <form #saveDataForm="ngForm" (submit)="updateProfile(this.fbauth_uid)">
+            <div class="md-form mt-4">
+              <input mdbInputDirective type="text" id="dpto" name="dpto" data-error="Inserta el nombre del departamento"
+                data-success="Ok" class="form-control" [(ngModel)]="modeldb.dpto" #dpto="ngModel" required>
+              <label for="dpto">Section</label>
+            </div>
+            <div class="md-form mt-4">
+              <input mdbInputDirective type="text" id="puesto" name="puesto" data-error="Inserta el nombre tu puesto"
+                data-success="Ok" class="form-control" [(ngModel)]="modeldb.puesto" #puesto="ngModel" required>
+              <label for="puesto">Office</label>
+            </div>
+            <div class="text-center">
+              <button class="btn rgba-teal-strong waves-light" mdbRippleRadius [disabled]="!saveDataForm.form.valid">Update data on database</button>
+            </div>
+          </form>
+      
+        </mdb-card-body>
+        <!--/.Card content-->
+      
+      </mdb-card>
+    </div>
+    <div class="col-md-4 text-center">
+      <button mdbBtn type="button" color="warning" class="waves-light" mdbWavesEffect (click)="signOut()">
+        <mdb-icon icon="sign-out"></mdb-icon>
+        Singout
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container contain">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <img width="300" alt="Angular Logo" src="https://smellyc0de.files.wordpress.com/2018/03/firebase-authentication-vert-light.png">
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <button
+      mdbBtn 
+      type="button" 
+      color="danger" class="waves-light" 
+      mdbWavesEffect
+      (click)="signIn()">
+        <mdb-icon icon="google"></mdb-icon>
+        Login with google
+      </button>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12 text-center">
+      <p>
+        Project developed in Angular, interacting with Firebase and Laravel (MySQL).
+      </p>
+    </div>
+  </div>
+</div>
